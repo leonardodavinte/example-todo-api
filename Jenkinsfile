@@ -23,10 +23,10 @@ node('php'){
         )
     }
     stage('Docker Build') {
-        sh 'docker build -t leonardodavinte/todoapi:$BUILD_NUMBER .'
+        sh 'docker build -t cromado/cidocker:$BUILD_NUMBER .'
     }
     
     stage('Docker Ship') {
-        sh 'docker push leonardodavinte/todoapi:$BUILD_NUMBER'
+        sh 'docker push cromado/cidocker:$BUILD_NUMBER'
     }
 }
