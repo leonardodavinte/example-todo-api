@@ -22,11 +22,11 @@ node('php'){
             }
         )
     }
- //   stage('Docker Build') {
- //       sh 'docker build -t jeffersonsouza/todoapi:$BUILD_NUMBER .'
- //   }
+    stage('Docker Build') {
+        sh 'docker build -t leonardodavinte/todoapi:$BUILD_NUMBER .'
+    }
     
- //   stage('Docker Ship') {
- //       sh 'docker push jeffersonsouza/todoapi:$BUILD_NUMBER'
- //   }
+    stage('Docker Ship') {
+        sh 'docker push leonardodavinte/todoapi:$BUILD_NUMBER'
+    }
 }
